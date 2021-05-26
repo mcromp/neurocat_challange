@@ -1,25 +1,27 @@
 import React from "react";
 import headLogo from "../assets/head_logo.png";
+import { Link } from "react-router-dom";
 
 const Header = ({ links }) => {
  return (
   <header className="nav">
-   <a href="/">
+   <Link to="/">
     <img src={headLogo} alt="Neurocat Logo" />
-   </a>
+   </Link>
    <nav>
-    {links.map((item) => (
-     <NavLink key={item.title} item={item} />
-    ))}
+    {links.map((link) => {
+     if (link.href) {
+      return <Link to={link.to}>{link.title}</Link>;
+     }
+     return (
+      <a href={link.href} alt={`link to ${link.title}`}>
+       {link.title}
+      </a>
+     );
+    })}
    </nav>
   </header>
  );
 };
-
-const NavLink = ({ item }) => (
- <a href={item.address} alt={`link to ${item.title}`}>
-  {item.title}
- </a>
-);
 
 export default Header;
