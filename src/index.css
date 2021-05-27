@@ -12,7 +12,6 @@
   scroll-behavior: smooth;
   --main: #41b2bc;
   --dark: #3d545c;
-
 }
 *{
   box-sizing: border-box; 
@@ -35,4 +34,10 @@ a:hover {
     /* color: var(--main);  */
     text-decoration:none; 
     cursor:pointer;  
+}
+.page{
+  margin-top: 5.5rem;
+  margin-bottom: 5rem;
+
+  padding: 0 .5rem;
 }

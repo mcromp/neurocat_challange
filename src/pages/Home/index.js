@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import Header from "../shared_components/Header";
+import Header from "../../shared_components/Header";
 import { Link } from "react-router-dom";
-import heroVid from "../assets/hero_vid.mp4";
+import heroVid from "../../assets/hero_vid.mp4";
+import "./style.css";
 
 const homeLinks = [
- { href: "#top", title: "Home" },
+ { to: "/", title: "Home" },
  { href: "#products", title: "Products" },
  { href: "#resources", title: "Resources" },
  { href: "#team", title: "Team" },
@@ -13,9 +14,9 @@ const homeLinks = [
 
 const VideoHero = () => {
  return (
-  //43BF6E
   <div className="hero-vid-container">
-   <video autoPlay muted loop class="hero-video">
+   <div className="hero-vid-filter" />
+   <video autoPlay muted loop className="hero-video">
     <source src={heroVid} type="video/mp4" />
     Your browser does not support the video tag.
    </video>
@@ -28,22 +29,24 @@ function Home() {
   window.scrollTo(0, 0);
  }, []);
  return (
-  <div id="top" className="page">
+  <div id="top" className="page home">
    <Header links={homeLinks} />
-   <div>
-    <VideoHero />
+   <VideoHero />
+   <div className="home__hero">
     <h2>What/Who is Neurocat?</h2>
-    <p className="home__top">
+    <p>
      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
     </p>
    </div>
-   <div>
-    <div>
+   <div className="home__statements">
+    <div className="statement">
+     <img src="" alt="" className="statement-icon" />
      <h3>Neurocat's mission statement</h3>
     </div>
-    <div>
+    <div className="statement">
+     <img src="" alt="" className="statement-icon" />
      <h3>Neurocat's vision statement</h3>
     </div>
    </div>
@@ -89,7 +92,7 @@ function Home() {
 }
 
 const HomeLinkBlock = ({ link, title }) => (
- <Link to={link}>
+ <Link to={link} className="link-block">
   <div>
    BLOCK HERE
    <h3>{title}</h3>
