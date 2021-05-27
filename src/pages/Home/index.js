@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import Header from "../../shared_components/Header";
 import { Link } from "react-router-dom";
 import heroVid from "../../assets/hero_vid.mp4";
+import icon0 from "../../assets/icon-slider-0.png";
+import icon1 from "../../assets/icon-slider-1.png";
+
 import "./style.css";
 
 const homeLinks = [
@@ -42,11 +45,11 @@ function Home() {
    </div>
    <div className="home__statements">
     <div className="statement">
-     <img src="" alt="" className="statement-icon" />
+     <img src={icon0} alt="Icon for mission" className="statement-icon" />
      <h3>Neurocat's mission statement</h3>
     </div>
     <div className="statement">
-     <img src="" alt="" className="statement-icon" />
+     <img src={icon1} alt="Icon for vision" className="statement-icon" />
      <h3>Neurocat's vision statement</h3>
     </div>
    </div>
