@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 import heroVid from "../../assets/hero_vid.mp4";
 import icon0 from "../../assets/icon-slider-0.png";
 import icon1 from "../../assets/icon-slider-1.png";
+import bgicon0 from "../../assets/bg_icon_1.png";
+import bgicon1 from "../../assets/bg_icon_2.png";
+import bgicon2 from "../../assets/bg_icon_3.png";
 
 import "./style.css";
 
 const homeLinks = [
- { to: "/", title: "Home" },
+ { href: "#top", title: "Home" },
  { href: "#products", title: "Products" },
  { href: "#resources", title: "Resources" },
  { href: "#team", title: "Team" },
@@ -54,9 +57,13 @@ function Home() {
     </div>
    </div>
    <div className="home__products" id="products">
-    <HomeLinkBlock link={"/services"} title={"AI Quality Services"} />
-    <HomeLinkBlock link={"/aidkit"} title={"aidkit"} />
-    <HomeLinkBlock link={"/deeptrust"} title={"DeepTrust"} />
+    <HomeLinkBlock
+     link={"/services"}
+     title={"AI Quality Services"}
+     icon={bgicon0}
+    />
+    <HomeLinkBlock link={"/aidkit"} title={"AIDKIT"} icon={bgicon1} />
+    <HomeLinkBlock link={"/deeptrust"} title={"DeepTrust"} icon={bgicon2} />
    </div>
    <div id="resources">
     <div>BLOCK</div>
@@ -94,17 +101,15 @@ function Home() {
  );
 }
 
-const HomeLinkBlock = ({ link, title }) => (
+const HomeLinkBlock = ({ link, title, icon }) => (
  <Link to={link} className="link-block">
-  <div>
-   BLOCK HERE
-   <h3>{title}</h3>
-   <p>
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-   </p>
-  </div>
+  <img src={icon} alt={`Icon for ${title}`} className="statement-icon" />
+  <h3>{title}</h3>
+  <p>
+   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+   aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  </p>
  </Link>
 );
 
