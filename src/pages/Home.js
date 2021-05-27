@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../shared_components/Header";
 import { Link } from "react-router-dom";
 const homeLinks = [
@@ -10,12 +10,15 @@ const homeLinks = [
 ];
 
 function Home() {
+ useEffect(() => {
+  window.scrollTo(0, 0);
+ }, []);
  return (
-  <div>
+  <div id="top" className="page">
    <Header links={homeLinks} />
    <div>
     <h2>What/Who is Neurocat?</h2>
-    <p className="home__top" id="top">
+    <p className="home__top">
      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -56,12 +59,15 @@ function Home() {
    </Link>
    <div>
     <h2>Customer Voices</h2>
+    BLOCK
    </div>
    <div id="team">
     <h2>Team</h2>
+    BLOCK
    </div>
    <div id="careers">
     <h2>Careers</h2>
+    BLOCK
    </div>
   </div>
  );

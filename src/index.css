@@ -1,9 +1,25 @@
+@font-face {
+  font-family: 'weblys';
+  src: url("./assets/font/weblysleekuisl.ttf") format("truetype");
+}
 :root{
   scroll-behavior: smooth;
-
+  --main: #41b2bc
 }
 
 body {
+  font-family: 'weblys', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--main); 
+    text-decoration:none; 
+    cursor:pointer;  
 }
