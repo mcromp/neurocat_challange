@@ -1,0 +1,25 @@
+.form{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+}
+.form .row{
+    display: flex;
+  flex-direction: row;
+}
+.form label{
+  margin: .3rem;
+  font-family: 'weblys', sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+.form input{
+padding: .2rem;
+font-size: 1rem;
+}
+
+.form select{
+padding: .4rem;
+}
