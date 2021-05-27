@@ -2,6 +2,8 @@ import React from "react";
 import ProjectBlock from "./ProjectBlock";
 import OfferingBlock from "./OfferingBlock";
 import Header from "../../shared_components/Header";
+import Footer from "../../shared_components/Footer";
+
 import { offertingsData, projectsBlocksData } from "./projectData";
 import "./style.css";
 
@@ -28,6 +30,7 @@ function Projects() {
      <ProjectBlock data={data} key={data.title} />
     ))}
    </div>
+   <Footer />
   </div>
  );
 }

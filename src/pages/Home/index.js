@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../shared_components/Header";
+import Footer from "../../shared_components/Footer";
 import Block from "../../shared_components/Block";
 import { Link } from "react-router-dom";
 import HomeLinkBlock from "./HomeLinkBlock";
@@ -99,6 +100,7 @@ function Home() {
     <h2>Careers</h2>
     <Block />
    </div>
+   <Footer />
   </div>
  );
 }
