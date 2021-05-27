@@ -2,14 +2,16 @@ import React, { useEffect } from "react";
 import Header from "../../shared_components/Header";
 import Block from "../../shared_components/Block";
 import { Link } from "react-router-dom";
-import heroVid from "../../assets/hero_vid.mp4";
+import HomeLinkBlock from "./HomeLinkBlock";
+import "./style.css";
+
+//assets
 import icon0 from "../../assets/icon-slider-0.png";
 import icon1 from "../../assets/icon-slider-1.png";
 import bgicon0 from "../../assets/bg_icon_1.png";
 import bgicon1 from "../../assets/bg_icon_2.png";
 import bgicon2 from "../../assets/bg_icon_3.png";
-
-import "./style.css";
+import VideoHero from "./VideoHero";
 
 const homeLinks = [
  { href: "#top", title: "Home" },
@@ -18,18 +20,6 @@ const homeLinks = [
  { href: "#team", title: "Team" },
  { href: "#careers", title: "Careers" },
 ];
-
-const VideoHero = () => {
- return (
-  <div className="hero-vid-container">
-   <div className="hero-vid-filter" />
-   <video autoPlay muted loop className="hero-video">
-    <source src={heroVid} type="video/mp4" />
-    Your browser does not support the video tag.
-   </video>
-  </div>
- );
-};
 
 function Home() {
  useEffect(() => {
@@ -59,12 +49,12 @@ function Home() {
    </div>
    <div className="home__products" id="products">
     <HomeLinkBlock
-     link={"/services"}
+     link={"/projects"}
      title={"AI Quality Services"}
      icon={bgicon0}
     />
-    <HomeLinkBlock link={"/aidkit"} title={"AIDKIT"} icon={bgicon1} />
-    <HomeLinkBlock link={"/deeptrust"} title={"DeepTrust"} icon={bgicon2} />
+    <HomeLinkBlock link={"/projects"} title={"AIDKIT"} icon={bgicon1} />
+    <HomeLinkBlock link={"/projects"} title={"DeepTrust"} icon={bgicon2} />
    </div>
    <div className="ai-infograph">
     <h3>Flowing Infograph of why AI Quality Matters</h3>
@@ -82,7 +72,7 @@ function Home() {
      </p>
     </div>
    </div>
-   <Link to="/din">
+   <Link to="/projects">
     <div className="din">
      <div className="text">
       <h3>Neurocat's work with DIN Standard</h3>
@@ -112,17 +102,5 @@ function Home() {
   </div>
  );
 }
-
-const HomeLinkBlock = ({ link, title, icon }) => (
- <Link to={link} className="link-block">
-  <img src={icon} alt={`Icon for ${title}`} className="statement-icon" />
-  <h3>{title}</h3>
-  <p>
-   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-   aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-  </p>
- </Link>
-);
 
 export default Home;
