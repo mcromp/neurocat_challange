@@ -10,25 +10,27 @@ const Header = ({ links }) => {
     <Link className="logo" to="/">
      <img className="logo-img" src={headLogo} alt="Neurocat Logo" />
     </Link>
-    {links.map((link) => {
-     if (link.href) {
+    <div className="nav-links">
+     {links.map((link) => {
+      if (link.href) {
+       return (
+        <a
+         key={link.title}
+         className="nav-link"
+         href={`${link.href}`}
+         alt={`link to ${link.title}`}
+        >
+         {link.title}
+        </a>
+       );
+      }
       return (
-       <a
-        key={link.title}
-        className="nav-link"
-        href={`${link.href}`}
-        alt={`link to ${link.title}`}
-       >
+       <Link key={link.title} className="nav-link" to={link.to}>
         {link.title}
-       </a>
+       </Link>
       );
-     }
-     return (
-      <Link key={link.title} className="nav-link" to={link.to}>
-       {link.title}
-      </Link>
-     );
-    })}
+     })}
+    </div>
    </nav>
   </header>
  );
