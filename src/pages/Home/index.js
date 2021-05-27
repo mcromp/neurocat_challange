@@ -97,17 +97,17 @@ function Home() {
      <Block />
     </div>
    </Link>
-   <div>
+   <div className="voices">
     <h2>Customer Voices</h2>
-    BLOCK
+    <Block />
    </div>
-   <div id="team">
+   <div className="team" id="team">
     <h2>Team</h2>
-    BLOCK
+    <Block />
    </div>
-   <div id="careers">
+   <div className="careers" id="careers">
     <h2>Careers</h2>
-    BLOCK
+    <Block />
    </div>
   </div>
  );
