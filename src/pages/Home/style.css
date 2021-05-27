@@ -39,7 +39,7 @@
 }
 
 .home__hero h2{
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .home__hero p{
   padding: 1rem;
@@ -106,4 +106,83 @@ height: 3rem;
 
 .link-block:hover{
   transform: scale(1.05);
+}
+
+/* AI INFOGRAPH */
+
+.home .ai-infograph{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.ai-infograph .ai-inforgraph-graphic{
+  width: 75%;
+  height: 15rem;
+  margin: 2rem;
+  border-radius: 20px;
+  background:  #17a2b8;
+  box-shadow: 0 0 50px rgb(0 0 0 / 30%);
+}
+
+/* RESOURCES */
+
+.home .resources {
+display: flex;
+align-items: center;
+
+}
+.resources .block {
+  width: 75%;
+  min-width: 20rem;
+  height: 10rem;
+  margin: 2rem;
+}
+
+.resources .text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.resources .text h3{
+  padding: 1rem;
+}
+
+
+/* DIN */
+
+.home .din{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 10rem;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgb(0 0 0 / 30%);
+  color: black;
+  transition: transform .2s;
+}
+
+.home .din:hover {
+  transform: scale(1.05);
+}
+
+.din .text{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  max-width: 30rem;
+  padding: 1rem;
+}
+.din h3{
+  padding: 1rem;
+}
+
+.din .block{
+  width: 200px;
+  height: 200px;
 }

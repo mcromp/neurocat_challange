@@ -12,8 +12,10 @@
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
   --main: #41b2bc;
+  --main2: #17a2b8;
   --dark: #3d545c;
 }
+
 *{
   box-sizing: border-box; 
   margin: 0;

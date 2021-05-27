@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../shared_components/Header";
+import Block from "../../shared_components/Block";
 import { Link } from "react-router-dom";
 import heroVid from "../../assets/hero_vid.mp4";
 import icon0 from "../../assets/icon-slider-0.png";
@@ -65,24 +66,35 @@ function Home() {
     <HomeLinkBlock link={"/aidkit"} title={"AIDKIT"} icon={bgicon1} />
     <HomeLinkBlock link={"/deeptrust"} title={"DeepTrust"} icon={bgicon2} />
    </div>
-   <div id="resources">
-    <div>BLOCK</div>
-    <h3>Neurocat's past industry projects...</h3>
-    <p>
-     architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-     quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-     magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-     quisquam est
-    </p>
+   <div className="ai-infograph">
+    <h3>Flowing Infograph of why AI Quality Matters</h3>
+    <div className="ai-inforgraph-graphic" />
+   </div>
+   <div className="resources" id="resources">
+    <Block />
+    <div className="text">
+     <h3>Neurocat's past industry projects...</h3>
+     <p>
+      architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+      quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+      magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+      quisquam est
+     </p>
+    </div>
    </div>
    <Link to="/din">
-    <div>
-     <h3>Neurocat's work with DIN Standard</h3>
-     <p>
-      qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-      quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-      aliquam quaerat voluptatem.
-     </p>
+    <div className="din">
+     <div className="text">
+      <h3>Neurocat's work with DIN Standard</h3>
+      <p>
+       qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+       quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+       aliquam quaerat voluptatem. qui dolorem ipsum quia dolor sit amet,
+       consectetur, adipisci velit, sed quia non numquam eius modi tempora
+       incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      </p>
+     </div>
+     <Block />
     </div>
    </Link>
    <div>

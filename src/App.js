@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./pages/Products";
-// import Header from "./shared_components/Header";
 import Home from "./pages/Home";
+import AidKit from "./pages/AidKit";
 
 function App() {
  return (
@@ -10,6 +10,7 @@ function App() {
    <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/products" element={<Products />} />
+    <Route path="/aidkit" element={<AidKit />} />
    </Routes>
   </Router>
  );
