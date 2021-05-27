@@ -1,4 +1,6 @@
 import React from "react";
+import Block from "../../shared_components/Block";
+
 import "./style.css";
 
 //assets
@@ -55,7 +57,16 @@ const offertingsData = [
  },
 ];
 
+const projectsBlocksData = [
+ { title: "Infograph on what neurocat tabs provide", id: null },
+ { title: "Neurocat tabs past project/service project", id: "service" },
+ { title: "Our non-profit projects", id: "nonprofit" },
+];
+
 function Projects() {
+ React.useEffect(() => {
+  window.scroll(0, 0);
+ }, []);
  return (
   <div className="page projects">
    <Header links={ProjectsLinks} />
@@ -64,13 +75,30 @@ function Projects() {
      <OfferingBlock key={offering.title} offering={offering} />
     ))}
    </div>
+   <div className="project-blocks">
+    {projectsBlocksData.map((data) => (
+     <ProjectBlock data={data} key={data.title} />
+    ))}
+   </div>
   </div>
  );
 }
 
+const ProjectBlock = ({ data }) => {
+ return (
+  <div className="project-block" id={data?.id}>
+   <h3>{data.title}</h3>
+   <Block />
+  </div>
+ );
+};
+
 const OfferingBlock = ({ offering }) => (
  <div className="offering">
-  <img alt={`Icon of ${offering.title}`} src={offering.img} />
+  <div className="img-container">
+   <span className="helper"></span>
+   <img alt={`Icon of ${offering.title}`} src={offering.img} />
+  </div>
   <h3>{offering.title}</h3>
   <p>{offering.text}</p>
  </div>
