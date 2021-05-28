@@ -1,6 +1,7 @@
 import React from "react";
 import headLogo from "../../assets/head_logo.png";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./style.css";
 
 const Header = ({ links }) => {
@@ -14,14 +15,14 @@ const Header = ({ links }) => {
      {links.map((link) => {
       if (link.href) {
        return (
-        <a
+        <HashLink
          key={link.title}
          className="nav-link"
-         href={`${link.href}`}
+         to={`${link.href}`}
          alt={`link to ${link.title}`}
         >
          {link.title}
-        </a>
+        </HashLink>
        );
       }
       return (
