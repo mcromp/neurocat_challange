@@ -5,7 +5,7 @@ import Projects from "./pages/Projects/Projects";
 
 function App() {
  return (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
    <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/projects" element={<Projects />} />
