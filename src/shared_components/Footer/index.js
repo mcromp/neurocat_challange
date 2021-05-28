@@ -1,5 +1,6 @@
 import React from "react";
 import * as Icon from "react-feather";
+import ContactForm from "../ContactForm/";
 import "./style.css";
 
 const contactDetails = [
@@ -32,7 +33,7 @@ function Footer() {
      <ContactBlock data={contact} key={contact.title} />
     ))}
    </div>
-   <div className="form">link to contact</div>
+   <ContactForm />
   </div>
  );
 }

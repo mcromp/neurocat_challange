@@ -1,19 +1,34 @@
+.contact-form {
+  width: 20rem;
+  padding: 0 2rem 2rem 1rem;
+  background: cream;
+}
+
+.contact-form .submitted{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.submitted p{
+  margin: 3rem 0;
+}
+
 .form{
   display: flex;
   flex-direction: column;
-justify-content: center;
+  justify-content: center;
 }
 .form .row{
     display: flex;
   flex-direction: row;
 }
 .form label{
-  margin: .3rem;
-  font-family: 'weblys', sans-serif;
-  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   width: 10rem;
+  margin: .3rem;
+  font-family: 'weblys', sans-serif;
+  font-size: .9rem;
 }
 .form input{
 padding: .2rem;
@@ -22,4 +37,26 @@ font-size: 1rem;
 
 .form select{
 padding: .4rem;
+}
+
+.form .error-message{
+  color: rgb(146, 0, 24);
+  font-size: .8rem;
+}
+.form input[value="Submit"]{
+    padding: .3rem;
+  border: solid 2px var(--main2);
+  border-radius: 20px;
+  background: var(--main);
+  color: white;
+  font-family: 'weblys', sans-serif;
+  transition: filter 0.3s;
+}
+.form input[value="Submit"]:disabled input[value="Submit"]:hover{
+background: grey;
+}
+
+.form input[value="Submit"]:hover{
+  cursor: pointer;
+  filter: brightness(1.2);
 }
