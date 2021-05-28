@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/neurocat_challange/static/css/main.74b419c0.chunk.css",
+    "main.js": "/neurocat_challange/static/js/main.c36cafd5.chunk.js",
+    "main.js.map": "/neurocat_challange/static/js/main.c36cafd5.chunk.js.map",
+    "runtime-main.js": "/neurocat_challange/static/js/runtime-main.68dd8a8f.js",
+    "runtime-main.js.map": "/neurocat_challange/static/js/runtime-main.68dd8a8f.js.map",
+    "static/js/2.603834b8.chunk.js": "/neurocat_challange/static/js/2.603834b8.chunk.js",
+    "static/js/2.603834b8.chunk.js.map": "/neurocat_challange/static/js/2.603834b8.chunk.js.map",
+    "index.html": "/neurocat_challange/index.html",
+    "static/css/main.74b419c0.chunk.css.map": "/neurocat_challange/static/css/main.74b419c0.chunk.css.map",
+    "static/js/2.603834b8.chunk.js.LICENSE.txt": "/neurocat_challange/static/js/2.603834b8.chunk.js.LICENSE.txt",
+    "static/media/bg_icon_1.fa3cb7e0.png": "/neurocat_challange/static/media/bg_icon_1.fa3cb7e0.png",
+    "static/media/bg_icon_2.7d3b51c8.png": "/neurocat_challange/static/media/bg_icon_2.7d3b51c8.png",
+    "static/media/bg_icon_3.b162b276.png": "/neurocat_challange/static/media/bg_icon_3.b162b276.png",
+    "static/media/head_logo.be73910c.png": "/neurocat_challange/static/media/head_logo.be73910c.png",
+    "static/media/hero_vid.6706710d.mp4": "/neurocat_challange/static/media/hero_vid.6706710d.mp4",
+    "static/media/index.css": "/neurocat_challange/static/media/weblysleekuisl.dabfbed9.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68dd8a8f.js",
+    "static/js/2.603834b8.chunk.js",
+    "static/css/main.74b419c0.chunk.css",
+    "static/js/main.c36cafd5.chunk.js"
+  ]
+}
